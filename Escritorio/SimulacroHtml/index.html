@@ -1,53 +1,98 @@
 <!doctype html>
+<!--
+  Declaración del tipo de documento HTML5. 
+  Esto asegura que el navegador interprete correctamente el HTML moderno.
+-->
 <html lang="en">
+<!--
+  Etiqueta raíz <html> con el atributo lang="en" para indicar que el contenido está en inglés.
+-->
+
 <head>
+    <!-- Información meta y configuración del documento -->
+
     <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8 para soportar caracteres especiales -->
+
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Configuración de la ventana gráfica (viewport) para que sea responsive en móviles -->
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Garantiza compatibilidad con Internet Explorer en modo Edge -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Enlaza el archivo CSS externo que contiene los estilos de la página -->
+
     <title>Blogr | Publishing Platform</title>
+    <!-- Título de la página que aparece en la pestaña del navegador -->
 </head>
+
 <body>
+    <!-- Cuerpo principal del documento -->
+
     <header>
+        <!-- Sección de encabezado que incluye logo, menú de navegación y botones de autenticación -->
+
         <div class="logo">
             <a href="">Blogr</a>
+            <!-- Logo de la página, normalmente enlaza a la página principal -->
         </div>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+        <!-- Checkbox invisible que se usa para activar/desactivar el menú responsive -->
 
         <label for="nav-toggle" class="menu-toggle" aria-label="Abrir menú">
             <span class="material-symbols-outlined">menu</span>
+            <!-- Ícono de menú (hamburguesa) para dispositivos móviles -->
         </label>
 
         <nav class="menu">
+            <!-- Menú de navegación principal -->
             <ul>
                 <li><a href="">Product <span class="material-symbols-outlined">keyboard_arrow_down</span></a></li>
                 <li><a href="">Company <span class="material-symbols-outlined">keyboard_arrow_down</span></a></li>
                 <li><a href="">Connect <span class="material-symbols-outlined">keyboard_arrow_down</span></a></li>
+                <!-- Submenús indicados con el icono de flecha hacia abajo -->
             </ul>
         </nav>
+
         <div class="auth-buttons">
             <button class="login-btn">Login</button>
             <button class="signup-btn">Sign Up</button>
+            <!-- Botones de inicio de sesión y registro -->
         </div>
     </header>
+
     <main>
+        <!-- Contenido principal de la página -->
+
         <section class="main-page">
+            <!-- Sección principal de bienvenida -->
             <div class="main-content">
                 <h1>A modern publishing platform</h1>
+                <!-- Título principal de la página -->
                 <p>Grow your audience and build your online brand</p>
+                <!-- Subtítulo o descripción breve -->
                 <div class="main-buttons">
                     <button class="start-btn">Start for Free</button>
                     <button class="learn-btn">Learn More</button>
+                    <!-- Botones de acción principal -->
                 </div>
             </div>
         </section>
 
         <section class="description-section">
+            <!-- Sección de descripción de funcionalidades -->
+
             <h2>Designed for the future</h2>
+            <!-- Subtítulo de la sección -->
+
             <div class="description-grid">
+                <!-- Grid para organizar contenido y la imagen -->
+
                 <div class="description-content">
+                    <!-- Contenido textual con artículos de descripción -->
                     <article class="description-item">
                         <h3>Introducing an extensible editor</h3>
                         <p>Blogr features an exceedingly intuitive interface which lets you focus
@@ -56,6 +101,7 @@
                             videos, and Markdown. Extensibility with plugins and themes provide
                             easy ways to add functionality or change the look of a blog.</p>
                     </article>
+
                     <article class="description-item">
                         <h3>Robust content management</h3>
                         <p>Flexible content management enables users to easily
@@ -64,17 +110,22 @@
                             flow. With this functionality, you’re in full control.</p>
                     </article>
                 </div>
+
                 <div class="image-container">
+                    <!-- Imagen acompañando el contenido -->
                     <img class="image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6xfWGICwKavc9H1eh44PW98LsXIYx9w9IwA1-UoIM7SkbM6wOgzd9j5FZ-gY_a5pfJPR9ToIALVu-4eHAHBcb5DV3LyDFTN3E3OSeu-YdzOQI5fn4ZO3Qnk8xEnSTGZY0cuIhZqKkzbYJN9BcbFgNOGxmbvocANQARKtktBJtrkHhVEN3M1a72iMATiTh/s16000/illustration-editor-desktop-svg.webp" alt="illustration">
                 </div>
             </div>
         </section>
 
         <section class="feature-infrastructure">
+            <!-- Sección de características y tecnología -->
+
             <div class="feature-container">
                 <div class="feature-header">
                     <div class="phone-image">
                         <img src="https://naughty-lumiere-249dfd.netlify.app/assets/images/illustration-phones.svg" alt="phone illustration">
+                        <!-- Imagen representando un teléfono -->
                     </div>
                     <article class="text-container">
                         <h2>State of the Art Infrastructure</h2>
@@ -87,7 +138,9 @@
                     </article>
                 </div>
             </div>
+
             <div class="feature-items">
+                <!-- Segunda parte de las características -->
                 <div class="computer-image">
                     <img src="https://blogr-landing-page-ashen.vercel.app/assets/img/illustration-laptop-desktop.svg" alt="computer illustration">
                 </div>
@@ -111,12 +164,16 @@
         </section>
 
         <footer>
+            <!-- Pie de página con enlaces adicionales y logo -->
+
             <div class="footer-container">
                 <div class="logo">
                     <a href="">Blogr</a>
                 </div>
+
                 <nav>
                     <ul>
+                        <!-- Enlaces del footer organizados por secciones -->
                         <li><a href="">Product</a>
                             <ul>
                                 <li><a href="">Overview</a></li>
