@@ -1,8 +1,20 @@
+/* =========================================================
+   IMPORTACIÓN DE FUENTES
+   ========================================================= */
+
+/* Fuente principal del sitio */
 @import url('https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* Iconos de Google Material Symbols (flecha y menú) */
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down,menu");
 
+
+/* =========================================================
+   VARIABLES GLOBALES (CUSTOM PROPERTIES)
+   ========================================================= */
+
 :root {
-    /* Colors */
+    /* Colores principales del diseño */
     --peach: #f26363;
     --peach-2: #ff8567;
     --peach-3: #ffb36b;
@@ -12,16 +24,16 @@
     --black: #202026;
     --white: #f2f2f2;
 
-    /* Font Families */
+    /* Familia tipográfica principal */
     --font-primary: 'Vend Sans';
 
-    /* Font Sizes */
+    /* Tamaños de fuente */
     --font-size-small: 14px;
     --font-size-medium: 18px;
     --font-size-large: 24px;
     --font-size-extra-large: 30px;
 
-    /* Spacing */
+    /* Sistema de espaciados */
     --space-xxs: 4px;
     --space-xs: 8px;
     --space-s: 12px;
@@ -30,20 +42,30 @@
     --space-xl: 32px;
     --space-2xl: 48px;
 
-    /* Layout helpers */
+    /* Helpers de layout */
     --content-max: 1200px;
     --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.08);
     --radius-pill: 999px;
     --radius-card: 16px;
-
 }
 
+
+/* =========================================================
+   RESET GENERAL
+   ========================================================= */
+
+/* Elimina márgenes y paddings por defecto y
+   asegura box-sizing consistente */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+
+/* =========================================================
+   ESTILOS BASE DEL BODY
+   ========================================================= */
 
 body {
     background-color: var(--white);
@@ -53,18 +75,30 @@ body {
     min-height: 100vh;
 }
 
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+
 header {
     padding: var(--space-m) var(--space-2xl);
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
-    background: linear-gradient(135deg, var(--peach) 0%, var(--peach-2) 40%, var(--peach-3) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--peach) 0%,
+        var(--peach-2) 40%,
+        var(--peach-3) 100%
+    );
     color: var(--white);
     position: relative;
     z-index: 10;
 }
 
+
+/* Estilos base para los iconos de Material Symbols */
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined', serif;
     font-weight: normal;
@@ -80,10 +114,13 @@ header {
     vertical-align: middle;
 }
 
+
+/* Contenedor del logo */
 .logo {
     margin-right: var(--space-xl)
 }
 
+/* Enlace del logo */
 .logo a {
     font-weight: 700;
     font-size: var(--font-size-extra-large);
@@ -91,6 +128,8 @@ header {
     color: var(--white);
 }
 
+
+/* Menú de navegación */
 .menu ul {
     list-style: none;
     display: flex;
@@ -98,7 +137,7 @@ header {
     color: var(--white);
 }
 
-
+/* Links del menú */
 .menu ul li a {
     font-size: var(--font-size-small);
     font-weight: 500;
@@ -109,6 +148,8 @@ header {
     gap: var(--space-xxs);
 }
 
+
+/* Contenedor de botones de autenticación */
 header .auth-buttons {
     margin-left: auto;
     display: flex;
@@ -116,11 +157,12 @@ header .auth-buttons {
     align-items: center;
 }
 
+/* Botones Login / Register */
 .auth-buttons button {
     font-family: var(--font-primary) serif;
     font-size: var(--font-size-small);
     font-weight: 600;
-    border-radius:  var(--radius-pill);
+    border-radius: var(--radius-pill);
     padding: 0.7rem 1.8rem;
     border: none;
     background-color: transparent;
@@ -128,6 +170,7 @@ header .auth-buttons {
     transition: 0.4s ease;
 }
 
+/* Estados hover y focus accesible */
 .auth-buttons button:hover,
 .auth-buttons button:focus-visible {
     background-color: var(--white);
@@ -135,10 +178,13 @@ header .auth-buttons {
     cursor: pointer;
 }
 
+
+/* Toggle oculto (posible checkbox) */
 .nav-toggle {
     display: none;
 }
 
+/* Botón hamburguesa (solo móvil) */
 .menu-toggle {
     display: none;
     background: transparent;
@@ -153,6 +199,12 @@ header .auth-buttons {
     margin-left: auto;
 }
 
+
+/* =========================================================
+   HERO / MAIN PAGE
+   ========================================================= */
+
+/* Título principal */
 h1 {
     font-size: clamp(2.4rem, 4.5vw, 3.8rem);
     font-weight: 700;
@@ -160,8 +212,14 @@ h1 {
     text-align: center;
 }
 
+/* Sección principal */
 .main-page {
-    background: linear-gradient(135deg, var(--peach) 0%, var(--peach-2) 40%, var(--peach-3) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--peach) 0%,
+        var(--peach-2) 40%,
+        var(--peach-3) 100%
+    );
     width: 100%;
     height: 40vh;
     display: grid;
@@ -173,12 +231,15 @@ h1 {
     overflow: hidden;
 }
 
+/* Texto descriptivo del hero */
 .main-content p {
     color: var(--white);
     font-weight: 500;
     font-size: var(--font-size-small);
 }
 
+
+/* Contenedor de botones principales */
 .main-buttons {
     margin-top: var(--space-xl);
     display: flex;
@@ -186,11 +247,12 @@ h1 {
     justify-content: center;
 }
 
+/* Botones del hero */
 .main-buttons button {
     font-family: var(--font-primary) serif;
     font-size: var(--font-size-small);
     font-weight: 600;
-    border-radius:  var(--radius-pill);
+    border-radius: var(--radius-pill);
     padding: 0.7rem 2rem;
     border: solid 1px var(--white);
     background-color: transparent;
@@ -198,6 +260,7 @@ h1 {
     transition: 0.4s ease;
 }
 
+/* Hover y focus */
 .main-buttons button:hover,
 .main-buttons button:focus-visible {
     cursor: pointer;
@@ -205,12 +268,18 @@ h1 {
     color: var(--peach);
 }
 
+
+/* =========================================================
+   SECCIÓN DESCRIPTIVA
+   ========================================================= */
+
 .description-section {
     display: grid;
     grid-template-rows: auto 1fr;
     padding-top: var(--space-2xl);
 }
 
+/* Grid principal texto + imagen */
 .description-grid {
     padding: var(--space-2xl) var(--space-2xl);
     display: grid;
@@ -221,23 +290,27 @@ h1 {
     margin: 0 auto;
 }
 
+/* Contenido textual */
 .description-content {
     display: grid;
     gap: var(--space-xl);
 }
 
+/* Título de sección */
 .description-section h2 {
     text-align: center;
     color: var(--navy-blue);
     font-size: var(--font-size-extra-large);
 }
 
+/* Subtítulos */
 .description-item h3 {
     font-size: var(--font-size-large);
     color: var(--navy-blue);
     margin-bottom: var(--space-m);
 }
 
+/* Párrafos */
 .description-item p {
     font-size: var(--font-size-medium);
     color: var(--black);
@@ -245,15 +318,22 @@ h1 {
     margin-bottom: var(--space-m);
 }
 
+/* Contenedor de imagen */
 .image-container {
     display: flex;
     justify-content: right;
 }
 
+/* Imagen descriptiva */
 .image-container img {
     width: 90%;
     height: auto;
 }
+
+
+/* =========================================================
+   FEATURE SECTION
+   ========================================================= */
 
 .feature-container {
     margin-top: var(--space-xl);
@@ -262,6 +342,7 @@ h1 {
     justify-items: center;
 }
 
+/* Header de features */
 .feature-header {
     position: relative;
     overflow: visible;
@@ -275,6 +356,7 @@ h1 {
     margin-bottom: var(--space-xl);
 }
 
+/* Texto de features */
 .text-container {
     grid-column: 2;
     justify-content: end;
@@ -292,6 +374,7 @@ h1 {
     line-height: 1.5;
 }
 
+/* Imagen flotante del teléfono */
 .phone-image {
     justify-content: start;
     padding: 0 6rem;
@@ -308,6 +391,8 @@ h1 {
     width: 450px;
 }
 
+
+/* Grid de características */
 .feature-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -319,6 +404,7 @@ h1 {
     margin: 0 auto;
 }
 
+/* Imagen de computadora */
 .computer-image img {
     display: block;
     justify-content: center;
@@ -326,17 +412,20 @@ h1 {
     height: auto;
 }
 
+/* Texto descriptivo de features */
 .feature-description {
     display: grid;
     gap: var(--space-xl);
 }
 
+/* Títulos */
 .feature-item h3 {
     font-size: var(--font-size-large);
     color: var(--navy-blue);
     margin-bottom: var(--space-xl);
 }
 
+/* Párrafos */
 .feature-item p {
     font-size: var(--font-size-medium);
     color: var(--black);
@@ -344,13 +433,19 @@ h1 {
     margin-bottom: 2rem;
 }
 
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 footer {
     border-radius: 0 8rem 0 0;
     background-color: var(--black);
     margin-top: 3rem;
-    padding : 2rem 6rem;
+    padding: 2rem 6rem;
 }
 
+/* Contenedor del footer */
 .footer-container {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -361,10 +456,12 @@ footer {
     margin: 0 auto;
 }
 
+/* Logo del footer */
 footer .footer-container .logo {
     margin-right: 10rem;
 }
 
+/* Navegación footer */
 footer nav ul {
     list-style: none;
     display: grid;
@@ -374,6 +471,7 @@ footer nav ul {
     margin: 0;
 }
 
+/* Sublistas */
 footer nav ul li ul {
     margin-top: 2rem;
     display: flex;
@@ -381,18 +479,26 @@ footer nav ul li ul {
     gap: 0.5rem;
 }
 
+/* Links principales */
 footer nav ul li a {
     font-weight: 600;
     color: var(--white);
     text-decoration: none;
 }
 
+/* Links secundarios */
 footer nav ul li ul li a {
     font-weight: 400;
     font-size: var(--font-size-small);
 }
 
+
+/* =========================================================
+   MEDIA QUERY TABLET
+   ========================================================= */
+
 @media (max-width: 1023px) and (min-width: 768px) {
+
     header {
         padding: var(--space-m) var(--space-xl);
         gap: var(--space-xl);
@@ -411,8 +517,8 @@ footer nav ul li ul li a {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
-        "image"
-        "text";
+            "image"
+            "text";
         margin-bottom: 10rem;
     }
 
@@ -441,8 +547,8 @@ footer nav ul li ul li a {
     .phone-image {
         justify-items: center;
         position: relative;
-        margin: -300px auto 0;   /* sube la imagen 40px para que salga del header */
-        width: clamp(220px, 35vw, 420px); /* tamaño responsivo */
+        margin: -300px auto 0;
+        width: clamp(220px, 35vw, 420px);
         pointer-events: none;
         display: block;
     }
@@ -470,13 +576,13 @@ footer nav ul li ul li a {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         grid-template-areas:
-        "logo"
-        "nav";
+            "logo"
+            "nav";
         text-align: center;
         gap: var(--space-xl);
     }
 
-    footer .footer-container .logo{
+    footer .footer-container .logo {
         justify-items: center;
         grid-area: logo;
         margin-right: 0;
@@ -488,7 +594,13 @@ footer nav ul li ul li a {
     }
 }
 
+
+/* =========================================================
+   MEDIA QUERY MÓVIL
+   ========================================================= */
+
 @media (max-width: 480px) {
+
     header {
         padding: var(--space-m) var(--space-l);
         gap: var(--space-m);
